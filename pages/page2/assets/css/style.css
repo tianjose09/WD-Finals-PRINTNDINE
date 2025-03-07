@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+/*Header*/
+#header {
+    padding: 20px;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 3em;
+    color: darkred;
+    font-family: 'Great Vibes', cursive;
+}
+/* Navbar*/
+#navbar {
+    background-color: darkred;
+    overflow: hidden;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#navbar li {
+    display: inline;
+}
+
+#navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+#navbar a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+#navbar a:hover::after {
+    width: 80%;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+
+        & > div.title{
+            margin-bottom: 25px;
+            font-size: 30px;
+            font-weight: bold;
+;
+            & > h3{
+                text-shadow: 4px 4px 6px rgb(194, 158, 158);
+            }
+        }
+
+        & > div.container{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 100px;
+            padding-bottom: 50px;
+          
+                & > div.cont1{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px;
+                    width: 1000px;
+                    gap: 20px;
+                    background-color: darkred;
+                    border-bottom: 2px solid black;
+                    border-radius: 10px;
+                    box-shadow: 10px 10px 5px 0px rgba(212,203,203,0.44);
+                    -webkit-box-shadow: 10px 10px 5px 0px rgba(212,203,203,0.44);
+                    -moz-box-shadow: 10px 10px 5px 0px rgba(212,203,203,0.44);
+
+                    & > img{
+                        height: 90px;
+                        border-radius: 10px;
+                        border: 1.5px solid black;
+                        left: 5px;
+                    }
+
+                    & > p{
+                        padding: 10px;
+                        color: white;
+                        font-size: 15px;
+                        text-align: justify;
+                    }
+                }
+    }
+}
+
+
+
+/* Footer*/
+#footer {
+    background-color: darkred;
+    color: white;
+    padding: 20px 40px;
+    position: relative;
+    border-radius: 20px 20px 0 0; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    font-size: 2em;
+    font-family: 'Great Vibes', cursive;
+    text-align: left;
+}
+
+.footer-links {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 70px; 
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: lightgray;
+}
+
+.footer-nav a:first-child {
+    margin-left: -20px; 
+}
+
+.footer-underline {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin: 20px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: lightgray;
+}
+
+@media (max-width: 768px) {
+    #header h1 {
+        font-size: 2.5em;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+    }
+
+    #navbar a {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #header h1 {
+        font-size: 2em;
+    }
+}
+ 
