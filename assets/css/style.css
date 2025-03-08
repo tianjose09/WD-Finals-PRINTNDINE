@@ -85,11 +85,23 @@ nav.info{
     font-family: 'Poppins', sans-serif;
 }
 
+nav.info h2 {
+    word-spacing: 40px;
+}
+
+nav.info h2::before,
+nav.info h2::after {
+    content: '\00A0';
+}
+
+
+
 section {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 35px;
 
         & > div.title{
             display: flex;
