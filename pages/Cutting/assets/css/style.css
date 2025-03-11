@@ -1,0 +1,138 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.banner {
+    background-color: darkred;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+    clip-path: ellipse(75% 100% at 50% 0%);
+    font-family: playfair display;
+    font-size: 30px;
+}
+
+.video-section {
+    padding: 40px 0;
+}
+
+.video-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.video-container img {
+    width: 90%;
+    border-radius: 20px;
+    height: 350px;
+}
+
+/* About Section */
+.about-section {
+    padding: 40px;
+    border-bottom: darkred 5px dashed;
+}
+
+.about-section h2 {
+    font-family: 'Playfair Display', serif;
+    color: darkred;
+    text-align: start;
+    font-size: 30px;
+}
+
+.about-section p {
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.highlight {
+    background: darkred;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 40px;
+    position: relative;
+    top: -8px; /* Adjust the value as needed */
+}
+
+/* Services Section */
+.services-section {
+    padding: 40px;
+}
+
+.services-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    color: darkred;
+}
+
+.services-list {
+    display: flex;
+    justify-content: center;
+    gap: 180px; /* Space between each service item */
+    flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    max-width: 400px; /* Adjust width to maintain a clean layout */
+}
+
+.service-item i {
+    color: darkred;
+    font-size: 20px;
+}
+
+.service-item p {
+    margin: 0;
+    font-size: 15px;
+    width: 300px;
+    text-align: justify;
+    flex: 1; /* Ensures text takes up the remaining space */
+}
+
+
+.services-list i {
+    color: darkred;
+    margin-right: 10px;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    transition: ease-in-out 0.3s;
+    :hover {
+        transform: scale(1.1);
+    }
+}
+
+.image-gallery img {
+    width: 300px;
+    border-radius: 15px;
+    height: 240px;
+    border: 3px solid darkred;
+    background-color: rgb(201, 201, 201);
+    transition: ease-in-out 0.3s;
+    :hover {
+        transform: scale(1.1);
+    }
+}
+
+/* Solution Section */
+.solution-section {
+    padding: 40px;
+    background: #f8f8f8;
+}
