@@ -9,13 +9,13 @@ body {
   color: white;
   }
   
-  
-  
   #header {
     padding: 20px;
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
   }
-  
+
   #header h1 {
     margin: 0;
     font-size: 3em;
@@ -23,11 +23,12 @@ body {
     font-family: 'Great Vibes', cursive;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
   }
+
   #navbar {
     background-color: darkred;
     overflow: hidden;
   }
-  
+
   #navbar ul {
     list-style-type: none;
     margin: 0;
@@ -36,11 +37,11 @@ body {
     justify-content: center;
     flex-wrap: wrap;
   }
-  
+
   #navbar li {
     display: inline;
   }
-  
+
   #navbar a {
     display: block;
     color: white;
@@ -49,7 +50,7 @@ body {
     text-decoration: none;
     position: relative;
   }
-  
+
   #navbar a::after {
     content: "";
     display: block;
@@ -62,11 +63,15 @@ body {
     transform: translateX(-50%);
     transition: width 0.3s ease-in-out;
   }
-  
+
+  #navbar a.active::after {
+    width: 80%;
+  }
+
   #navbar a:hover::after {
     width: 80%;
   }
-  
+
   .carousel-container {
     max-width: 100%;
     height: 500px;
@@ -144,16 +149,7 @@ body {
     background-color: black;
   }
   
-  #news-and-blogs::before {
-    content: "";
-    position: absolute;
-    top: -50px;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    background: url('wavy-shape.png') no-repeat center top;
-    background-size: cover;
-  }
+
   
   #news-and-blogs .cont{
     display: flex;
@@ -455,7 +451,7 @@ body {
     padding: 20px 40px;
     position: relative;
     border-radius: 20px 20px 0 0;
-    margin-top: 50px;
+
   }
   
   .footer-content {
@@ -526,7 +522,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 50px;
 
     & > .back{
         display: flex;
@@ -553,6 +549,12 @@ body {
             }
         }
     }
+}
+
+/* Solution Section */
+.solution-section {
+  padding: 40px;
+  background: #f8f8f8;
 }
   
   @media (max-width: 768px) {

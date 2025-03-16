@@ -11,17 +11,20 @@
 </head>
 <body>
     <div id="header">
-        <h1>Print N ' Dine</h1>
+        <h1>
+        <img src="./assets/img/logo.png" alt="Vitaly Tea Logo" style="vertical-align: middle; width: auto; height: 1.5em;" />
+        Vitaly Tea
+        </h1>
     </div>
-
+        
     <div id="navbar">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#order">Order</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" class="nav-link" id="home-link">Home</a></li>
+        <li><a href="#services" class="nav-link" id="services-link">Services</a></li>
+        <li><a href="#menu" class="nav-link" id="menu-link">Menu</a></li>
+        <li><a href="#order" class="nav-link" id="order-link">Order</a></li>
+        <li><a href="#about" class="nav-link" id="about-link">About Us</a></li>
+        <li><a href="#contact" class="nav-link" id="contact-link">Contact</a></li>
         </ul>
     </div>
     
@@ -55,6 +58,15 @@
                     <h2>Digital Printing</h2>
                     <p>Digital printing is a modern printing method that produces high-quality prints with sharp details and vibrant colors.</p>
                     <a href="./pages/Digital Printing/index.html" class="learnmore">View Service</a>
+                    <div class="quantity-container">
+                        <div class="buttons">
+                            <button class="quantity-btn" onclick="changeQuantity('digital', -1)">-</button>
+                            <span id="quantity-digital">1</span>
+                            <button class="quantity-btn" onclick="changeQuantity('digital', 1)">+</button>
+                        </div>
+                        
+                        <button class="utilize-btn" onclick="utilizeService('Digital Printing', 'digital')">Utilize Service</button>
+                    </div>
                 </div>
                 <div class="cont1">
                     <img src="./assets/img/bind.jpg" alt="">
@@ -91,7 +103,7 @@
 
     <div id="footer">
         <div class="footer-content">
-            <div class="footer-logo">Print N ' Dine</div>
+            <div class="footer-logo">Vitaly Tea</div>
             <div class="footer-links">
                 <div class="footer-nav">
                     <a href="#blog">Blog</a>
@@ -111,5 +123,37 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function setActiveLink() {
+    const links = document.querySelectorAll("#navbar a");
+    
+    links.forEach(link => {
+    link.addEventListener("click", function() {
+    links.forEach(link => link.classList.remove("active"));
+    this.classList.add("active");
+    });
+    });
+    }
+    
+    document.addEventListener("DOMContentLoaded", setActiveLink);
+    </script>
+
+<script>
+    let quantities = {
+        digital: 1,
+        binding: 1
+    };
+
+    function changeQuantity(service, amount) {
+        quantities[service] = Math.max(1, quantities[service] + amount);
+        document.getElementById(`quantity-${service}`).textContent = quantities[service];
+    }
+
+    function utilizeService(serviceName, service) {
+        alert(`You have utilized the ${serviceName} service ${quantities[service]} time(s).`);
+    }
+</script> 
+
 </body>
 </html>

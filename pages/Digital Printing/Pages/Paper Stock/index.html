@@ -9,6 +9,25 @@
     <link rel="stylesheet" href="../../../Digital Printing/Pages/Paper Stock/css/style.css">
 </head>
 <body>
+
+    <div id="header">
+        <h1>
+        <img src="../../Pages/Ink/img/logo.png" alt="Vitaly Tea Logo" style="vertical-align: middle; width: auto; height: 1.5em;" />
+        Vitaly Tea
+        </h1>
+    </div>
+        
+    <div id="navbar">
+        <ul>
+        <li><a href="#home" class="nav-link" id="home-link">Home</a></li>
+        <li><a href="#services" class="nav-link" id="services-link">Services</a></li>
+        <li><a href="#menu" class="nav-link" id="menu-link">Menu</a></li>
+        <li><a href="#order" class="nav-link" id="order-link">Order</a></li>
+        <li><a href="#about" class="nav-link" id="about-link">About Us</a></li>
+        <li><a href="#contact" class="nav-link" id="contact-link">Contact</a></li>
+        </ul>
+    </div>
+    
     <header class="banner">
         <img src="../../../Digital Printing/Pages/Paper Stock/img/banner.jpg" alt="Ink Banner">
         <h1>Paper Stock</h1>
@@ -101,8 +120,32 @@
         </div>
     </section>
 
-    <div class="footer-accent-bar"></div>
+    <section class="solution-section"></section>
 
+    <div id="footer">
+        <div class="footer-content">
+        <div class="footer-logo">Vitaly Tea</div>
+        <div class="footer-links">
+        <div class="footer-nav">
+        <a href="#services">Services</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#about">About Us</a>
+        </div>
+        </div>
+        </div>
+        
+        <div class="footer-underline"></div>
+        
+        <div class="footer-bottom">
+        <p>&copy; 2025 All Rights Reserved</p>
+        <div class="social-icons">
+        <p>Follow us</p>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        </div>
+        </div>
+        
     <script>
         let currentIndex = 0;
 
@@ -142,5 +185,21 @@
             card.classList.toggle("flipped");
         }
     </script>
+
+<script>
+    function setActiveLink() {
+const links = document.querySelectorAll("#navbar a");
+
+links.forEach(link => {
+link.addEventListener("click", function() {
+links.forEach(link => link.classList.remove("active"));
+this.classList.add("active");
+});
+});
+}
+
+document.addEventListener("DOMContentLoaded", setActiveLink);
+</script>
+
 </body>
 </html>

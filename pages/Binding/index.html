@@ -10,6 +10,24 @@
 </head>
 <body>
 
+    <div id="header">
+        <h1>
+        <img src="../Binding/assets/img/logo.png" alt="Vitaly Tea Logo" style="vertical-align: middle; width: auto; height: 1.5em;" />
+        Vitaly Tea
+        </h1>
+    </div>
+        
+    <div id="navbar">
+        <ul>
+        <li><a href="#home" class="nav-link" id="home-link">Home</a></li>
+        <li><a href="#services" class="nav-link" id="services-link">Services</a></li>
+        <li><a href="#menu" class="nav-link" id="menu-link">Menu</a></li>
+        <li><a href="#order" class="nav-link" id="order-link">Order</a></li>
+        <li><a href="#about" class="nav-link" id="about-link">About Us</a></li>
+        <li><a href="#contact" class="nav-link" id="contact-link">Contact</a></li>
+        </ul>
+    </div>
+
     <header class="banner">
         <h1 style="text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);">Binding</h1>
     </header>
@@ -42,23 +60,77 @@
         </div>
     </section>
 
-    <section class="solution-section">
-        <h3>Different Methods of Binding</h3>
-        <div class="solution-cards">
-            <div class="solution-card">
-                <span>01</span>
-                <h4>Saddle Stitch</h4>
-                <p>A simple and cost-effective binding method where folded sheets are stapled along the spine. Ideal for booklets, brochures, and magazines, offering a clean and professional look. This method is best suited for smaller page counts and lightweight materials.</p>
+    <section class="ink-wave">
+        <img src="../../pages/Digital Printing/Pages/Ink/img/wave1-removebg-preview.png" alt="Wave Effect">
+        <img src="../../pages/Digital Printing/Pages/Ink/img/wave1-removebg-preview.png" alt="Wave Effect">
+        <img src="../../pages/Digital Printing/Pages/Ink/img/wave1-removebg-preview.png" alt="Wave Effect">
+        <img src="../../pages/Digital Printing/Pages/Ink/img/wave1-removebg-preview.png" alt="Wave Effect">
+    </section>
+
+    <section class="ink-brands-section">
+        <div class="section-title">
+            <h2>Different Brands of Ink</h2>
+        </div>
+
+        <div class="carousel-container">
+            <!-- Previous Button -->
+            <button class="carousel-btn prev-btn" onclick="moveCarousel(-1)">❮</button>
+
+            <!-- Carousel Items -->
+            <div class="carousel-wrapper">
+                <div class="carousel" id="ink-carousel">
+                    <div class="carousel-item">
+                        <div class="flip-card" onclick="flipCard(this)">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="../../pages/Binding/assets/img/ss-removebg-preview.png" alt="Saddle Stitch" class="brand-img">
+                                    <h3 class="brand-title">Saddle Stitch</h3>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>A simple and cost-effective binding method where folded sheets are stapled along the spine. Ideal for booklets, brochures, and magazines.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="flip-card" onclick="flipCard(this)">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="../../pages/Binding/assets/img/hea-removebg-preview.png" alt="Heated Spine" class="brand-img">
+                                    <h3 class="brand-title">Heated Spine</h3>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>A durable binding method that uses heat to securely bond pages with a strong adhesive spine, creating a professional and polished finish.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="flip-card" onclick="flipCard(this)">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="../../pages/Binding/assets/img/wire-removebg-preview.png" alt="Wire" class="brand-img">
+                                    <h3 class="brand-title">Wire</h3>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>A sturdy and flexible binding method using metal loops to hold pages together, allowing them to lay flat when opened.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="solution-card">
-                <span>02</span>
-                <h4>Heated Spine</h4>
-                <p>A durable binding method that uses heat to securely bond pages with a strong adhesive spine, creating a professional and polished finish. This method ensures longevity and prevents pages from coming loose over time. Ideal for reports, presentations, and high-quality documents.</p>
-            </div>
-            <div class="solution-card">
-                <span>03</span>
-                <h4>Wire</h4>
-                <p>A sturdy and flexible binding method using metal loops to hold pages together, allowing them to lay flat when opened. Ideal for notebooks, reports, and presentations, offering a professional and durable finish. It provides easy page-turning and a sleek, polished look.</p>
+
+            <!-- Next Button -->
+            <button class="carousel-btn next-btn" onclick="moveCarousel(1)">❯</button>
+
+            <!-- Indicators -->
+            <div class="carousel-indicators" id="ink-carousel-indicators">
+                <span class="indicator active" onclick="jumpToSlide(0)"></span>
+                <span class="indicator" onclick="jumpToSlide(1)"></span>
+                <span class="indicator" onclick="jumpToSlide(2)"></span>
             </div>
         </div>
     </section>
@@ -68,6 +140,89 @@
             <a href="../../index.html">Go Back</a>
         </div>
     </section>
+
+    <section class="solution-section">
+
+    </section>
+
+    <div id="footer">
+        <div class="footer-content">
+        <div class="footer-logo">Vitaly Tea</div>
+        <div class="footer-links">
+        <div class="footer-nav">
+        <a href="#services">Services</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#about">About Us</a>
+        </div>
+        </div>
+        </div>
+        
+        <div class="footer-underline"></div>
+        
+        <div class="footer-bottom">
+        <p>&copy; 2025 All Rights Reserved</p>
+        <div class="social-icons">
+        <p>Follow us</p>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        </div>
+        </div>
+        
+    <script>
+        let currentIndex = 0;
+
+        function moveCarousel(direction) {
+            const carousel = document.getElementById("ink-carousel");
+            const items = carousel.querySelectorAll(".carousel-item");
+            const totalSlides = items.length;
+
+            currentIndex += direction;
+
+            if (currentIndex < 0) {
+                currentIndex = totalSlides - 1;
+            } else if (currentIndex >= totalSlides) {
+                currentIndex = 0;
+            }
+
+            updateCarousel(carousel, currentIndex);
+        }
+
+        function jumpToSlide(index) {
+            const carousel = document.getElementById("ink-carousel");
+            currentIndex = index;
+            updateCarousel(carousel, currentIndex);
+        }
+
+        function updateCarousel(carousel, index) {
+            const translateXValue = -index * 100;
+            carousel.style.transform = `translateX(${translateXValue}%)`;
+
+            const indicators = document.querySelectorAll(".carousel-indicators .indicator");
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle("active", i === index);
+            });
+        }
+
+        function flipCard(card) {
+            card.classList.toggle("flipped");
+        }
+    </script>
+
+<script>
+    function setActiveLink() {
+const links = document.querySelectorAll("#navbar a");
+
+links.forEach(link => {
+link.addEventListener("click", function() {
+links.forEach(link => link.classList.remove("active"));
+this.classList.add("active");
+});
+});
+}
+
+document.addEventListener("DOMContentLoaded", setActiveLink);
+</script>
 
 </body>
 </html>

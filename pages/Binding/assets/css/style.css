@@ -7,6 +7,74 @@ body {
     text-align: center;
 }
 
+#header {
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    }
+    
+    #header h1 {
+      margin: 0;
+      font-size: 3em;
+      color: darkred;
+      font-family: 'Great Vibes', cursive;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    
+    #navbar {
+      background-color: darkred;
+      overflow: hidden;
+    }
+    
+    #navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    #navbar li {
+      display: inline;
+    }
+    
+    #navbar a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      position: relative;
+    }
+    
+    #navbar a::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: width 0.3s ease-in-out;
+    }
+    
+    #navbar a.active::after {
+    width: 80%;
+    }
+    
+    #navbar a:hover::after {
+    width: 80%;
+    }
+    
+    #navbar a:hover::after {
+      width: 80%;
+    }
+    
 .banner {
     background-color: darkred;
     color: white;
@@ -131,53 +199,181 @@ body {
     }
 }
 
-/* Solution Section */
-.solution-section {
+/* Ink Wave Section */
+.ink-wave {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.ink-wave img {
+    width: 25vw;
+    max-width: 100%;
+    height: auto;
+    min-height: 90px;
+}
+
+.ink-brands-section{
+    background-color: #e8e8e8;
     padding: 40px;
-    background: #f8f8f8;
 }
 
-.solution-section h3 {
-    font-family: 'Playfair Display', serif;
-    color: darkred;
-    padding-bottom: 25px;
+/* Carousel */
+.carousel-container {
+    max-width: 400px;
+    margin: 0 auto 60px auto;
+    position: relative;
+    overflow: hidden;
 }
 
-.solution-cards {
+.carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+#ink-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    align-items: center;
 }
 
-.solution-card {
-    background: white;
-    padding: 20px;
-    width: 30%;
+/* Flip Cards */
+.flip-card {
+    width: 250px;
+    height: 250px;
+    perspective: 1000px; /* 3D effect */
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card-front, .flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
-    border: 2px solid darkred;
     border-radius: 10px;
+    border: #8b0000 2px solid;
 }
 
-.solution-card span {
-    font-size: 24px;
-    font-weight: bold;
+.flip-card-front {
+    background: none;
+}
+
+.flip-card-back {
+    background: rgba(0, 0, 0, 0.8);
     color: white;
-    background: darkred;
-    padding: 5px 15px;
-    border-radius: 50%;
+    transform: rotateY(180deg);
+    font-size: 1.1em;
 }
 
-.solution-card h4 {
-    font-family: 'Playfair Display', serif;
-    margin: 10px 0;
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Brand Images */
+.brand-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 10px;
+    object-fit: contain;
+    box-shadow: none;
+}
+
+.brand-title {
+    font-size: 1.2em;
+    margin: 15px 0;
+    color: darkred;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: darkred;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.carousel-btn:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Carousel Indicators */
+#ink-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: darkred;
 }
 
 .goback{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 50px;
 
     & > .back{
         display: flex;
@@ -205,4 +401,87 @@ body {
             }
         }
     }
+}
+
+#footer {
+    background-color: darkred;
+    color: white;
+    padding: 20px 40px;
+    position: relative;
+    border-radius: 20px 20px 0 0;
+    }
+    
+    .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    }
+    
+    .footer-logo {
+    font-size: 2em;
+    font-family: 'Great Vibes', cursive;
+    text-align: left;
+    }
+    
+    .footer-links {
+    text-align: center;
+    flex-grow: 1;
+    }
+    
+    .footer-nav {
+    margin: 15px 0;
+    gap: 100px;
+    
+    }
+    
+    .footer-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1em;
+    transition: color 0.3s;
+    gap: 100px;
+    
+    }
+    
+    .footer-nav a:hover {
+    color: lightgray;
+    }
+    
+    .footer-underline {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin: 10px 0;
+    }
+    
+    .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    }
+    
+    .social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 5px; 
+    }
+    .social-icons a {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s;
+    }
+    
+    .social-icons a:hover {
+    color: lightgray;
+    }
+
+/* Solution Section */
+.solution-section {
+    padding: 40px;
+    background: #f8f8f8;
 }
