@@ -1,5 +1,4 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
 
 /* General Styles */
 body {
@@ -7,6 +6,9 @@ body {
     padding: 0;
     background-color: #f0f0f0;
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 }
 
 #header {
@@ -17,73 +19,73 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    }
-    
-    #header h1 {
-      margin: 0;
-      font-size: 3em;
-      color: darkred;
-      font-family: 'Great Vibes', cursive;
-      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-    }
-    
-    
-    #navbar {
-      background-color: darkred;
-      overflow: hidden;
-    }
-    
-    #navbar ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    
-    #navbar li {
-      display: inline;
-    }
-    
-    #navbar a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 20px;
-      text-decoration: none;
-      position: relative;
-    }
-    
-    #navbar a::after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 2px;
-      background-color: white;
-      position: absolute;
-      bottom: 5px;
-      left: 50%;
-      transform: translateX(-50%);
-      transition: width 0.3s ease-in-out;
-    }
-    
-    #navbar a.active::after {
-    width: 80%;
-    }
-    
-    #navbar a:hover::after {
-    width: 80%;
-    }
-    
+}
 
-    
+#header h1 {
+    margin: 0;
+    font-size: 3em;
+    color: darkred;
+    font-family: 'Great Vibes', cursive;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    vertical-align: middle;
+    width: auto;
+    height: 1.5em;
+}
+
+/* Navbar */
+#navbar {
+    background-color: darkred;
+    overflow: hidden;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#navbar li {
+    display: inline;
+}
+
+#navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+#navbar a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+#navbar a.active::after,
+#navbar a:hover::after {
+    width: 80%;
+}
+
 /* Banner Section */
 .banner {
     position: relative;
     width: 100%;
-    height: 220px; /* Adjust as needed */
-    min-height: 150px;
+    height: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,13 +99,12 @@ body {
 .banner img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Change from cover to contain */
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
 }
-
 
 .banner::before {
     content: "";
@@ -112,7 +113,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 0;
 }
 
@@ -128,11 +129,6 @@ body {
     height: 35px;
 }
 
-.footer-accent-bar {
-    background-color: #bababa;
-    height: 40px;
-}
-
 /* About Ink Section */
 .about-ink {
     display: flex;
@@ -145,7 +141,7 @@ body {
 .about-ink p {
     font-size: 18px;
     line-height: 1.6;
-    width: 800px;
+    max-width: 800px;
 }
 
 /* Ink Wave Section */
@@ -154,15 +150,14 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: auto;
+    width: 100%;
     overflow: hidden;
     margin: 0;
     padding: 0;
 }
 
 .ink-wave img {
-    width: 25vw;
+    width: 25%;
     max-width: 100%;
     height: auto;
     min-height: 90px;
@@ -214,7 +209,7 @@ body {
 .flip-card {
     width: 250px;
     height: 250px;
-    perspective: 1000px; /* 3D effect */
+    perspective: 1000px;
     cursor: pointer;
 }
 
@@ -264,7 +259,6 @@ body {
     height: 220px;
     border-radius: 10px;
     object-fit: contain;
-    box-shadow: none;
 }
 
 .brand-title {
@@ -328,118 +322,104 @@ body {
     background-color: darkred;
 }
 
-/* Solution Section */
-.solution-section {
-    padding: 40px;
-    background: #f8f8f8;
-  }
-  
-.goback{
+/* Go Back Section */
+.go-back-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
-
-    & > .back{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        & > a{
-            background-color: rgb(255, 255, 255);
-            color: #8b0000;
-            border: 2px solid darkred;
-            border-radius: 5px;
-            font-size: 15px;
-            font-weight: 600;
-            padding: 10px 20px;
-            text-decoration: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 70px;
-            transition: ease-in-out 0.3s;
-            &:hover{
-                background-color: #8b0000;
-                color: white;
-            }
-        }
-    }
+    background-color: rgb(255, 255, 255);
+    height: 120px;
+    width: 100vw;
 }
 
+.back-button a {
+    background-color: white;
+    color: darkred;
+    border: 2px solid darkred;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: ease-in-out 0.3s;
+}
+
+.back-button a:hover {
+    background-color: darkred;
+    color: white;
+}
+
+/* Footer */
 #footer {
     background-color: darkred;
     color: white;
     padding: 20px 40px;
     position: relative;
     border-radius: 20px 20px 0 0;
-    }
-    
-    .footer-content {
+    padding-top: 50px;
+}
+
+.footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    }
-    
-    .footer-logo {
+}
+
+.footer-logo {
     font-size: 2em;
     font-family: 'Great Vibes', cursive;
     text-align: left;
-    }
-    
-    .footer-links {
+}
+
+.footer-links {
     text-align: center;
     flex-grow: 1;
-    }
-    
-    .footer-nav {
-    margin: 15px 0;
-    gap: 100px;
-    
-    }
-    
-    .footer-nav a {
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.footer-nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
     font-size: 1em;
     transition: color 0.3s;
-    gap: 100px;
-    
-    }
-    
-    .footer-nav a:hover {
+}
+
+.footer-nav a:hover {
     color: lightgray;
-    }
-    
-    .footer-underline {
+}
+
+.footer-underline {
     width: 100%;
     height: 1px;
     background-color: white;
-    margin: 10px 0;
-    }
-    
-    .footer-bottom {
+    margin: 20px 0;
+}
+
+.footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
-    }
-    
-    .social-icons {
+}
+
+.social-icons {
     display: flex;
     gap: 15px;
-    align-items: center;
-    margin-top: 5px; 
-    }
-    .social-icons a {
+}
+
+.social-icons a {
     color: white;
     font-size: 1.5em;
     text-decoration: none;
     transition: color 0.3s;
-    }
-    
-    .social-icons a:hover {
+}
+
+.social-icons a:hover {
     color: lightgray;
-    }
+}

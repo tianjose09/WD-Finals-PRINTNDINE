@@ -337,38 +337,7 @@ body {
     background: #f8f8f8;
   }
   
-.goback{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
 
-    & > .back{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        & > a{
-            background-color: rgb(255, 255, 255);
-            color: #8b0000;
-            border: 2px solid darkred;
-            border-radius: 5px;
-            font-size: 15px;
-            font-weight: 600;
-            padding: 10px 20px;
-            text-decoration: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 70px;
-            transition: ease-in-out 0.3s;
-            &:hover{
-                background-color: #8b0000;
-                color: white;
-            }
-        }
-    }
-}
 
 #footer {
     background-color: darkred;
@@ -446,3 +415,31 @@ body {
     .social-icons a:hover {
     color: lightgray;
     }
+
+    
+/* Go Back Section */
+.go-back-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 120px;
+    width: 100vw;
+}
+
+.back-button a {
+    background-color: white;
+    color: darkred;
+    border: 2px solid darkred;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: ease-in-out 0.3s;
+}
+
+.back-button a:hover {
+    background-color: darkred;
+    color: white;
+}
